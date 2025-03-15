@@ -20,6 +20,6 @@ RUN npm run build
 # Use a lightweight web server to serve the build
 FROM nginx:alpine
 EXPOSE 80
-# Copy the build files to the nginx public directory
+# Copy the build files to the nginx public directory1
 COPY --from=dist /app/dist /usr/share/nginx/html
 CMD ["nginx", "-g", "daemon off;"]
